@@ -1,0 +1,11 @@
+.teams {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.controls-block {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,19 @@
+.controls {
+  border: 1px solid black;
+  padding: 5px;
+  width: 150px;
+  float: left;
+  vertical-align: top;
+}
+
+.controls .running {
+  color: #1ec226;
+}
+
+.controls .notRunning {
+  color: red;
+}
+
+.controls button {
+  margin: 5px;
+}

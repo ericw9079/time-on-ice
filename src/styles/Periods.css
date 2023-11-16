@@ -1,0 +1,22 @@
+.period.active {
+  background: lightblue;
+  -webkit-box-shadow: inset 0px 0px 5px #8fadb7;
+     -moz-box-shadow: inset 0px 0px 5px #8fadb7;
+          box-shadow: inset 0px 0px 5px #8fadb7;
+   outline: none;
+}
+
+.period {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.periods {
+  display: flex;
+  max-width: 50%;
+  float: right;
+}
+.period-box {
+  display: flex;
+  flex-wrap: wrap;
+}

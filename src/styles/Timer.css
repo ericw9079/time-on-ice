@@ -1,0 +1,28 @@
+.timer {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  max-width: calc(100% / 3);
+  box-sizing: border-box;
+}
+
+.timer * {
+  margin: 2px 0;
+}
+
+.timer button {
+  min-height: 40px;
+  padding: 0;
+}
+
+.timer button.selected {
+  background: lightblue;
+  -webkit-box-shadow: inset 0px 0px 5px #8fadb7;
+     -moz-box-shadow: inset 0px 0px 5px #8fadb7;
+          box-shadow: inset 0px 0px 5px #8fadb7;
+   outline: none;
+}
+
+.timer input {
+  text-align: center;
+}
