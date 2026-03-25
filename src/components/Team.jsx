@@ -10,7 +10,10 @@ import '../styles/Team.css';
 /**
  * Team Component
  */
-const Team = ({ running, id }) => {
+const Team = ({
+  running = true,
+  id,
+}) => {
   const parentID = useContext(IdContext);
   const { updateTimers } = useContext(DataContext);
   const [teamName, setTeamName] = useState('');
@@ -85,10 +88,6 @@ const Team = ({ running, id }) => {
       </div>
     </IdContext.Provider>
   );
-};
-
-Team.defaultProp = {
-  running: false,
 };
 
 export default Team;

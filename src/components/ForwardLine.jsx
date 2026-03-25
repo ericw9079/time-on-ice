@@ -7,7 +7,10 @@ import '../styles/ForwardLine.css';
 /**
  * Forward line component
  */
-const ForwardLine = ({ running, id }) => {
+const ForwardLine = ({
+  running = false,
+  id,
+}) => {
   const parentID = useContext(IdContext);
   return (
     <IdContext.Provider value={`${parentID ? `${parentID}-` : ''}forward${id}`}>
@@ -27,10 +30,6 @@ const ForwardLine = ({ running, id }) => {
       </div>
     </IdContext.Provider>
   );
-};
-
-ForwardLine.defaultProps = {
-  running: false,
 };
 
 export default ForwardLine;

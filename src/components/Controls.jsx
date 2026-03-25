@@ -3,7 +3,10 @@ import ExportButton from './ExportButton';
 
 import '../styles/Controls.css';
 
-const Controls = ({ running, setRunning }) => {
+const Controls = ({
+  running = false,
+  setRunning = () => {},
+}) => {
 
   return (
     <div className="controls">
@@ -20,11 +23,6 @@ const Controls = ({ running, setRunning }) => {
       />
     </div>
   );
-};
-
-Controls.defaultProps = {
-  running: false,
-  setRunning: () => { },
 };
 
 export default Controls;

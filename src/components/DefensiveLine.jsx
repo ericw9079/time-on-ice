@@ -7,7 +7,10 @@ import '../styles/DefensiveLine.css';
 /**
  * Defensive line component
  */
-const DefensiveLine = ({ running, id }) => {
+const DefensiveLine = ({
+  running = false,
+  id,
+}) => {
   const parentID = useContext(IdContext);
   return (
     <IdContext.Provider value={`${parentID ? `${parentID}-` : ''}defense${id}`}>
@@ -23,10 +26,6 @@ const DefensiveLine = ({ running, id }) => {
       </div>
     </IdContext.Provider>
   )
-};
-
-DefensiveLine.defaultProps = {
-  running: false,
 };
 
 export default DefensiveLine;
