@@ -2,7 +2,10 @@ import { React, useReducer } from 'react';
 
 import '../styles/Periods.css';
 
-const Periods = ({ period, setPeriod }) => {
+const Periods = ({
+  period = '1',
+  setPeriod = () => {},
+}) => {
   const [periods, addPeriod] = useReducer((periods, action) => {
     const newPeriods = new Set(periods);
     newPeriods.add(action);
@@ -32,10 +35,5 @@ const Periods = ({ period, setPeriod }) => {
     </div>
   );
 };
-
-Periods.defaultProps = {
-  period: '1',
-  setPeriod: () => { },
-}
 
 export default Periods;

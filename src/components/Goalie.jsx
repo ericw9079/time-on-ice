@@ -7,7 +7,10 @@ import '../styles/Goalie.css';
 /**
  * Goalie component
  */
-const Goalie = ({ running, id }) => {
+const Goalie = ({
+  running = false,
+  id,
+}) => {
   const parentID = useContext(IdContext);
   return (
     <IdContext.Provider value={`${parentID ? `${parentID}-` : ''}golie${id}`}>
@@ -19,10 +22,6 @@ const Goalie = ({ running, id }) => {
       </div>
     </IdContext.Provider>
   )
-};
-
-Goalie.defaultProps = {
-  running: false,
 };
 
 export default Goalie;

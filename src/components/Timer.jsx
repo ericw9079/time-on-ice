@@ -8,7 +8,10 @@ import '../styles/Timer.css';
 /**
  * Timer component
  */
-const Timer = ({ running, id }) => {
+const Timer = ({
+  running = false,
+  id,
+}) => {
   const [timer] = useTimer({ precision: 'secondTenths' });
   const [name, setName] = useState('');
   const [selected, setSelected] = useState(false);
@@ -69,10 +72,6 @@ const Timer = ({ running, id }) => {
       </button>
     </div>
   );
-};
-
-Timer.defaultProps = {
-  running: false,
 };
 
 export default Timer;
