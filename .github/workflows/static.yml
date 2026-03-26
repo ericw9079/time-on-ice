@@ -41,6 +41,7 @@ jobs:
           # Upload entire repository
           path: './dist'
   Deploy:
+    needs: Build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
